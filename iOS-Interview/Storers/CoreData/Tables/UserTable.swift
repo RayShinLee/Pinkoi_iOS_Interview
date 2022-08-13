@@ -22,7 +22,8 @@ extension CoreDataStorer.UserTable {
             return User(id: id,
                         name: field_name,
                         email: field_email,
-                        isDesigner: field_is_designer)
+                        isDesigner: field_is_designer,
+                        create_at: created_at)
         }
         
         init(user: User, createdDate: Date = Date()) {

@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct User: Codable {
+struct User: Codable, CoreDataTable {
     let id: String
     let name: String
     let email: String
     let isDesigner: Bool
+    let create_at: Date
 }

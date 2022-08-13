@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct Product: Codable {
+struct Product: Codable, CoreDataTable {
     let id: String
     let title: String
     let description: String
     let price: Decimal
     let user: User
+    let create_at: Date
 }
