@@ -16,3 +16,20 @@ extension CoreDataStorer {
         let created_at: Date
     }
 }
+
+extension CoreDataStorer.UserTable {
+    var user: User {
+            return User(id: id,
+                        name: field_name,
+                        email: field_email,
+                        isDesigner: field_is_designer)
+        }
+        
+        init(user: User, createdDate: Date = Date()) {
+            self.id = user.id
+            self.field_name = user.name
+            self.field_email = user.email
+            self.field_is_designer = user.isDesigner
+            self.created_at = createdDate
+        }
+}
